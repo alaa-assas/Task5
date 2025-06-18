@@ -119,12 +119,8 @@
   .fs-40{
     font-size: 25px;
   }
-  .fs-14{
-    font-size: 12px !important;
-  }
-  .p-14{
-    padding: 8px !important;
-  }
+
+
 }
 
 @media (max-width: 767px) {
@@ -138,6 +134,12 @@
   }
   .fs-40{
     font-size: 20px;
+  }
+  .p-14{
+    padding: 8px !important;
+  }
+  .fs-14{
+    font-size: 12px !important;
   }
 }
 

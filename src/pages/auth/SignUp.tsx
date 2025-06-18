@@ -167,7 +167,7 @@ const SignUp = () => {
       ))}
 
       {/* Profile Image */}
-      <Row className="pb-xxl-3 p-xl-2 pb-1 ">
+      <Row className="p-lg-2 pb-1 ">
         <Col>
           <Form.Group controlId="profileImage">
             <Form.Label className="fw-medium lh-1 ls-normal fs-14 text-grey">
@@ -184,11 +184,11 @@ const SignUp = () => {
       </Row>
 
       {/* Submit Button */}
-      <Row className="pb-xxl-3 pb-xl-2 pb-1 ">
+      <Row className="pb-xxl-3 pb-xl-2 pb-1">
         <Col>
           <BtnCustom
             name={"SIGN UP"}
-            classExtra="p-xxl-3 p-xl-2 p-1 fs-14 w-100"
+            classExtra="p-md-3 p-1 fs-14 w-100"
             size="lg"
             type="submit"
           />

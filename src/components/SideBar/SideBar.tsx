@@ -101,7 +101,7 @@ const Sidebar: React.FC<SidebarProps> = ({ show,onClose }) => {
           <NavLink
             key={index}
             to={item.path}
-            className={({ isActive }) => `fs-14 text-decoration-none text-dark rounded py-lg-2 py-1 px-4 d-flex gap-2 mx-auto ${ isActive ? "bg-orange" : ""}`}>
+            className={({ isActive }) => `fs-14 text-decoration-none text-dark rounded py-lg-2 py-1 px-4 d-flex align-items-center gap-2 mx-auto ${ isActive ? "bg-orange" : ""}`}>
             <Image src={item.src} alt={item.alt} />
             <span className="sidebar-link fw-medium position-relative">{item.name}</span>
           </NavLink>
@@ -110,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ show,onClose }) => {
 
       {/* Logout Button */}
         <Button
-          className="logout-btn py-lg-2 py-1 px-3 d-flex align-items-center gap-4 fw-medium text-decoration-none mt-auto"
+          className="logout-btn py-lg-2 py-1 px-3 d-flex align-items-center gap-lg-4 gap-3 fw-medium text-decoration-none mt-auto fs-14"
           onClick={handleShow}
           variant="link">
           Logout

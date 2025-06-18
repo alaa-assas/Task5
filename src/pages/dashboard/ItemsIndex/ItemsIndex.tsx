@@ -92,7 +92,7 @@ const ItemsIndex = () => {
 
       <BtnCustom
         name={"ADD NEW PRODUCT"}
-        classExtra="p-3 align-self-lg-end align-self-center mb-32"
+        classExtra="p-3 align-self-lg-end align-self-center mb-32 fs-14"
         onClick={() => navigate("add")}
       />
 
@@ -111,12 +111,12 @@ const ItemsIndex = () => {
       )}
       {!loading && !error && (
         <div className="items-container mb-80">
-         <Row className="g-3 justify-content-center">
+        <Row className="g-4 justify-content-center">
           {currentProducts.length === 0 ? (
             <p>No products found</p>
           ) : (
             currentProducts.map((item) => (
-              <Col key={item.id} md={3} className="d-flex justify-content-center">
+              <Col key={item.id} xs={3} className="d-flex justify-content-center">
                 <ItemCard
                   id={item.id}
                   productName={item.name}

@@ -1,6 +1,6 @@
 .form-auth{
-    background: linear-gradient(71.17deg, #FEAF00 19.35%, #F8D442 90.12%)
-}
+    background: linear-gradient(71.17deg, var(--orange00) 19.35%, var(--orange01) 90.12%)
+} 
 
 .form-auth-container{
     border: 1px solid var(--grey05) !important;
@@ -9,7 +9,7 @@
   }
 
 
-@media (max-width: 1439px) {
+@media (max-width: 1200px) {
     .company-logo{
         height: 30px !important;
         width: 100px !important;

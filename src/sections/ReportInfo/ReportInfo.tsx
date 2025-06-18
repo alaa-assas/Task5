@@ -18,7 +18,7 @@ const ReportInfo = () => {
             {item.icon}
           </div>
           <span className="text">
-            <h3 className="fs-4 fw-semibold">{item.label}</h3>
+            <h3 className="fs-40 fw-semibold">{item.label}</h3>
             <p>{item.value}</p>
           </span>
         </li>

@@ -63,7 +63,7 @@ const ItemCard: React.FC<ItemCardProps> = ({id,productName,src,onEdit,onDeleteSu
 
   return (
     <div
-      className="card image-hover-container position-relative cursor-pointer d-inline-block overflow-hidden rounded-4">
+      className="grid-card card image-hover-container position-relative cursor-pointer d-inline-block overflow-hidden rounded-4 grid-card">
         <div className="card-body">
           <ImageCustom
           src={src}

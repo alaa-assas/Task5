@@ -6,6 +6,12 @@
     margin-bottom: 80px;
 }
 
+  
+  .grid-card {
+    width: 208px; /* عرض ثابت للبطاقة */
+    height: auto;
+    margin: 0 auto; /* مركزية */
+  }
 /* .items-page-content{
     padding: 0 100px !important;
 } */
@@ -27,7 +33,5 @@
         padding: 0 50px !important;
     } */
 
-    .items-page-content .btn-custom{
-        font-size: 14px !important;
-    }
+
 }

@@ -1,3 +1,8 @@
+/* .grid-card {
+    flex: 0 0 208px;
+    max-width: 208px;
+  } */
+  
 .image-hover-container {
     transition: all 0.3s ease;
     box-shadow: 8px 8px 4px 0px #00000040;
@@ -55,10 +60,10 @@
     color: var(--orange00) !important;
 }
 
-@media (max-width: 1439px){
+@media (max-width: 1366px){
     .card-body{
         height: 175px;
-        width: 175px; 
+        width: 200px; 
     }
 
     .overlay p {
@@ -72,7 +77,6 @@
         min-width: 70px;
     }
 }
-
 
 /* @media (max-width: 992px){
     .card-body{

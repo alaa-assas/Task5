@@ -37,7 +37,7 @@ const Login = () => {
       placeholder: "Enter your email",
       type: "email",
       ref: email,
-      classes: "pb-3 pt-5",
+      classes: "pb-lg-3 pb-2 pt-5",
       errorKey: "email",
     },
     {
@@ -46,7 +46,7 @@ const Login = () => {
       placeholder: "Enter password",
       type: "password",
       ref: password,
-      classes: "pb-4",
+      classes: "pb-lg-4 pb-3",
       errorKey: "password",
     },
   ];
@@ -92,8 +92,9 @@ const Login = () => {
   return (
     <Form onSubmit={login} className="p-lg-5 p-3">
       {/* logo company */}
-      <Row className="text-center pb-5">
+      <Row className="text-center pb-xxl-5 pb-xl-3 pb-2 d-flex justify-content-center">
         <Image
+          className="company-logo"
           src="/Task5/Images/SignUp/Logo.svg"
           alt="FocalX Logo"
           width={150}
@@ -122,11 +123,11 @@ const Login = () => {
       ))}
       {errors?.msg && <p className="text-danger mb-1 fs-14 text-center">{errors.msg}</p>}
       {/* Submit Button */}
-      <Row className="pb-4">
+      <Row className="pb-xxl-3 pb-xl-2 pb-1">
         <Col>
           <BtnCustom
             name={"SIGN IN"}
-            classExtra="p-3 fs-14 w-100"
+            classExtra="p-md-3 p-1 fs-14 w-100"
             size="lg"
             type="submit"
           />
