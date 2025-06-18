@@ -1,0 +1,34 @@
+.recharts-legend-item-text,
+.recharts-legend-item .recharts-surface {
+    font-size: 30px !important;
+}
+
+.chart-bg {
+    padding: 50px;
+}
+
+.chart-container{
+    max-width: 1200px !important;
+    margin: 0 auto;
+}
+
+@media(max-width: 992px) {
+
+    .recharts-wrapper,
+    .recharts-legend-wrapper {
+        width: 100% !important;
+    }
+
+    .chart-bg {
+        padding: 0px;
+    }
+
+    .recharts-legend-item-text,
+    .recharts-legend-item .recharts-surface {
+        font-size: 18px !important;
+    }
+
+    .chart-container{
+        margin: 0 25px;
+    }
+}

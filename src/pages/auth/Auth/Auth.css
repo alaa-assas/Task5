@@ -1,0 +1,17 @@
+.form-auth{
+    background: linear-gradient(71.17deg, #FEAF00 19.35%, #F8D442 90.12%)
+}
+
+.form-auth-container{
+    border: 1px solid var(--grey05) !important;
+    box-shadow: 2px 5px 10px 0px #0000001A;
+    max-width: 500px !important;
+  }
+
+
+@media (max-width: 1439px) {
+    .company-logo{
+        height: 30px !important;
+        width: 100px !important;
+    }
+}   
