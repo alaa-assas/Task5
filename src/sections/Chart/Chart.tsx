@@ -10,7 +10,7 @@ const data = [
 
 const SalesLineChart = () => {
   return (
-    <div className="chart-container p-3 bg-white rounded-5">
+    <div className="chart-container py-3 bg-white rounded-5">
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />

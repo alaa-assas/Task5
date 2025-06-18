@@ -52,7 +52,7 @@ const Home = () => {
           )}
           {/* elements for show in home page */}
           {hideElement && (
-            <div className="container-lg pt-4">
+            <div className="container-lg pt-lg-4 p-3">
               <ReportInfo />
               <SalesLineChart />
             </div>

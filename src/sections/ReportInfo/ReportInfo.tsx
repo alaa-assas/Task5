@@ -11,7 +11,7 @@ const ReportInfo = () => {
   ];
 
   return (
-    <ul className="box-info d-flex flex-wrap  justify-content-center align-items-center gap-4">
+    <ul className="box-info d-flex flex-wrap  justify-content-center align-items-center gap-4 ps-0">
       {items.map((item, index) => (
         <li className="d-flex align-items-center gap-4" key={index}>
           <div className="bx d-flex align-items-center justify-content-center rounded-2 fs-2">

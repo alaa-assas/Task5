@@ -25,8 +25,6 @@ const ItemsIndex = () => {
   const indexOfLastItem = currentPage * 8;
   const indexOfFirstItem = indexOfLastItem - 8;
 
-  const [searchQuery, setSearchQuery] = useState("");
-
   const currentProducts = filteredProducts.slice(
     indexOfFirstItem,
     indexOfLastItem
@@ -66,7 +64,6 @@ const ItemsIndex = () => {
 
   // Search for products by name
   const Search = (query: string) => {
-    setSearchQuery(query);
     setCurrentPage(1);
 
     if (!query.trim()) {
@@ -111,12 +108,12 @@ const ItemsIndex = () => {
       )}
       {!loading && !error && (
         <div className="items-container mb-80">
-        <Row className="g-4 justify-content-center">
+        <Row className="g-xxl-4 g-xl-3 g-2 d-grid grid-cols-4">
           {currentProducts.length === 0 ? (
             <p>No products found</p>
           ) : (
             currentProducts.map((item) => (
-              <Col key={item.id} xs={3} className="d-flex justify-content-center">
+              // <Col key={item.id} xs={3} className="d-flex justify-content-center">
                 <ItemCard
                   id={item.id}
                   productName={item.name}
@@ -124,7 +121,7 @@ const ItemsIndex = () => {
                   onEdit={() => navigate(`edit/${item.id}`)}
                   onDeleteSuccess={fetchProducts}
                 />
-              </Col>
+              // </Col>
             ))
           )}
         </Row>
