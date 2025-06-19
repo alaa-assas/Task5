@@ -184,7 +184,7 @@ const SignUp = () => {
       </Row>
 
       {/* Submit Button */}
-      <Row className="pb-xxl-3 pb-xl-2 pb-1">
+      <Row className="pb-xxl-2 pb-1">
         <Col>
           <BtnCustom
             name={"SIGN UP"}

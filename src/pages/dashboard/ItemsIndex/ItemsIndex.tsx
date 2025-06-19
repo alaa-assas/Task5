@@ -105,7 +105,7 @@ const ItemsIndex = () => {
       {/* search box */}
       <SearchInput
         placeholder="Search product by name"
-        classExtra="pb-3 pb-xl-5"
+        classExtra="pb-3 pb-xl-4"
         onSearch={Search}
       />
 

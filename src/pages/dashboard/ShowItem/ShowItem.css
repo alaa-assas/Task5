@@ -1,11 +1,11 @@
 .itemShowWapper {
   padding-top: 2dvh;
-  padding-bottom: 4.7dvh;
+  padding-bottom: 4.5dvh;
 }
   
   .itemShowTitle {
-    margin-bottom:3dvh;
-    margin-top: 6.4dvh;
+    margin-bottom:2.8dvh;
+    margin-top: 5.5dvh;
   }
   
   .itemShowSpan {
@@ -18,7 +18,7 @@
   }
 
   .itemShowPrice{
-      margin-top: 3dvh;
+      margin-top: 2.5dvh;
   }
 
   @media (max-width: 1439px) {
