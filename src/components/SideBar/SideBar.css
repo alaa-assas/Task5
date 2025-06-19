@@ -9,7 +9,6 @@
 }
 
 .nav-links {
-    /* max-height: calc(100vh - 500px); */
     overflow-y: auto;
 }
 

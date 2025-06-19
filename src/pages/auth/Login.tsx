@@ -13,6 +13,7 @@ import AppToast from "../../components/ToastCustom/ToastCustom";
 
 const Login = () => {
   const [errors, setErrors] = useState<AuthError>();
+  const [loading, setLoading] = useState(false);
 
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
@@ -53,6 +54,7 @@ const Login = () => {
 
   const login = async (event: FormEvent) => {
     event.preventDefault();
+    setLoading(true);
     axios
       .post(
         "https://web-production-3ca4c.up.railway.app/api/login",
@@ -85,7 +87,8 @@ const Login = () => {
         if(err.response.status == 401)
           setErrors(err.response.data)
         else
-          setErrors(err.response.data.errors)
+          setErrors(err.response.data.errors);
+          setLoading(false);
       });
       }
 
@@ -130,6 +133,7 @@ const Login = () => {
             classExtra="p-md-3 p-1 fs-14 w-100"
             size="lg"
             type="submit"
+            disabled={loading}
           />
         </Col>
       </Row>

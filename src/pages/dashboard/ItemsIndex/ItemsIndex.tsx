@@ -82,8 +82,6 @@ const ItemsIndex = () => {
     }
   };
 
-
-
   // Search for products by name
   const Search = (query: string) => {
     setCurrentPage(1);
@@ -135,15 +133,14 @@ const ItemsIndex = () => {
             <p>No products found</p>
           ) : (
             currentProducts.map((item) => (
-              // <Col key={item.id} xs={3} className="d-flex justify-content-center">
                 <ItemCard
+                  key={item.id}
                   id={item.id}
                   productName={item.name}
                   src={item.image_url}
                   onEdit={() => navigate(`edit/${item.id}`)}
                   onDeleteSuccess={fetchProducts}
                 />
-              // </Col>
             ))
           )}
         </Row>

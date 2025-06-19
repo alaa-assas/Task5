@@ -1,6 +1,7 @@
 import { useState, useImperativeHandle, forwardRef, useRef, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "./ImageUploadBox.css";
+import ImageCustom from "../ImageCustom/ImageCustom";
 
 type Props = {
   addNewItem?: string;
@@ -46,7 +47,8 @@ const ImageUploadBox = forwardRef<HTMLInputElement, Props>(({ initialImage, addN
         onClick={() => fileInputRef.current?.click()}
       >
         {preview ? (
-          <img src={preview} alt="Preview" className="upload-preview" />
+          <ImageCustom src={preview} alt="Preview" className="upload-preview" fallbackSrc="/Task5/Images/product/default.png" />
+          // <img src={preview} alt="Preview" className="upload-preview" />
         ) : (
           <img src="/Task5/Images/SignUp/UploadIcon.svg" alt="" className="uploadIcon" />
         )}

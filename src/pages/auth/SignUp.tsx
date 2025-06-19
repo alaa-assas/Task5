@@ -21,7 +21,7 @@ const SignUp = () => {
   const profile_image = useRef<HTMLInputElement>(null);
 
   const [errors, setErrors] = useState<AuthError>();
-
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [toast, setToast] = useState<ToastData>({
     show: false,
@@ -89,6 +89,7 @@ const SignUp = () => {
 
   const signup = async (event: FormEvent) => {
     event.preventDefault();
+    setLoading(true);
     axios.post(
         "https://web-production-3ca4c.up.railway.app/api/register",
         {
@@ -123,6 +124,7 @@ const SignUp = () => {
       .catch((err) => {
         console.log(err);
         setErrors(err.response.data.errors);
+        setLoading(false);
       });
   };
 
@@ -191,6 +193,7 @@ const SignUp = () => {
             classExtra="p-md-3 p-1 fs-14 w-100"
             size="lg"
             type="submit"
+            disabled={loading}
           />
         </Col>
       </Row>

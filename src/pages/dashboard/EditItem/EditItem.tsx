@@ -18,6 +18,7 @@ const EditItem = () => {
         type: 'success',
         message: '',
     });
+    const [disable, setDisable] = useState(false);
 
     const { id } = useParams();
     const name = useRef<HTMLInputElement>(null!);
@@ -73,6 +74,7 @@ const EditItem = () => {
 
     const sendData = (event: FormEvent) => {
         event.preventDefault();
+        setDisable(true);
 
         axios.post(
                 `https://web-production-3ca4c.up.railway.app/api/items/${id}`,
@@ -108,6 +110,7 @@ const EditItem = () => {
                     message: 'Error Edit item, please try again'
                   });
                 setErrors(err.response.data.errors);
+                setDisable(false);
             });
     };
 
@@ -138,6 +141,7 @@ const EditItem = () => {
                 image={image}
                 initialImage={oldData?.image_url}
                 error={errors}
+                loading={disable}
             />
             {toast.type && <AppToast data={toast} />}
         </div>

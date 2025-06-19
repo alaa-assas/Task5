@@ -23,12 +23,12 @@ type AddEditProps = {
     onSubmit: (e: React.FormEvent) => void;
     image: RefObject<HTMLInputElement>;
     title: string;
-      initialImage?: string; 
-
+    initialImage?: string; 
+    loading: boolean
 };
 
-const ItemForm = ({ error ,addItemData, onSubmit, image, title, initialImage }: AddEditProps) => {
-    
+const ItemForm = ({loading, error ,addItemData, onSubmit, image, title, initialImage }: AddEditProps) => {
+
     return (
         <div className="formWrapper container-lg">
             <BackBtn to="/home/items" />
@@ -68,7 +68,7 @@ const ItemForm = ({ error ,addItemData, onSubmit, image, title, initialImage }: 
 
                 <Row>
                     <Col className="d-flex justify-content-center">
-                        <BtnCustom name={"Save"} classExtra="p-3 fs-2 submitBtn mb-4" size="lg" type="submit" />
+                        <BtnCustom name={"Save"} classExtra="p-3 fs-2 submitBtn mb-4" size="lg" type="submit" disabled={loading} />
                     </Col>
                 </Row>
             </Form>

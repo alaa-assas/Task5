@@ -8,6 +8,7 @@ import type { ToastData } from "../../../types/ToastData";
 
 const AddItem = () => {
     const [errors, setErrors] = useState<ItemError>();
+    const [loading, setLoading] = useState(false);
 
     const [toast, setToast] = useState<ToastData>({
         show: false,
@@ -42,6 +43,7 @@ const AddItem = () => {
 
     const sendData = (event: FormEvent) => {
         event.preventDefault();
+        setLoading(true);
 
         axios.post(
                 "https://web-production-3ca4c.up.railway.app/api/items",
@@ -77,6 +79,7 @@ const AddItem = () => {
                     type: 'danger',
                     message: 'Error adding item, please try again'
                   });
+                  setLoading(false);
             });
     };
 
@@ -88,6 +91,7 @@ const AddItem = () => {
                 onSubmit={sendData}
                 image={image}
                 error={errors}
+                loading={loading}
             />
             {toast.type && <AppToast data={toast} />}
         </>
