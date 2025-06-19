@@ -1,10 +1,10 @@
 .itemShowWapper {
   padding-top: 2dvh;
-  padding-bottom: 4.5dvh;
+  padding-bottom: 4dvh;
 }
   
   .itemShowTitle {
-    margin-bottom:2.8dvh;
+    margin-bottom:2.5dvh;
     margin-top: 5.5dvh;
   }
   
@@ -13,8 +13,8 @@
   }
   
   .itemShowImage {
-      width: 370px;
-      height: 370px;
+      width: 350px;
+      height: 39dvh;
   }
 
   .itemShowPrice{
