@@ -130,7 +130,7 @@ const Login = () => {
         <Col>
           <BtnCustom
             name={"SIGN IN"}
-            classExtra="p-md-3 p-1 fs-14 w-100"
+            classExtra="p-md-3 p-2 fs-14 w-100"
             size="lg"
             type="submit"
             disabled={loading}

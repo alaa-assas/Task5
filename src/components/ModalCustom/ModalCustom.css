@@ -17,8 +17,7 @@
         padding: 40px 0 !important;
     }
     
-    .modal-content .modal-body p
-        {
+    .modal-content .modal-body p{
        font-size: 18px !important;
     }
 
@@ -26,5 +25,32 @@
         width: 100px;
         font-size: 20px !important;
     }
+
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px 0 !important;
+    }
+    
+    .modal-content .modal-body p{
+       font-size: 14px !important;
+    }
+
+    .modal-content .modal-custom-btn {
+        width: 60px;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 576px) {
+   .modal-sm-responsive{
+      width: 100% !important;
+      max-width: 340px !important;
+      margin: 0 auto; 
+    }
+    .modal-backdrop.show{
+        width: 100% !important;
+    }      
 
 }

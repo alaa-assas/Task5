@@ -23,7 +23,7 @@ const ItemsIndex = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsToShow, setItemsToShow] = useState(6);
 
-  const totalPages = Math.ceil(products.length / itemsToShow);
+  const totalPages = Math.ceil(filteredProducts.length / itemsToShow);
   const indexOfLastItem = currentPage * itemsToShow;
   const indexOfFirstItem = indexOfLastItem - itemsToShow;
 

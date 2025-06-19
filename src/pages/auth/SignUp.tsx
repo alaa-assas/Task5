@@ -190,7 +190,7 @@ const SignUp = () => {
         <Col>
           <BtnCustom
             name={"SIGN UP"}
-            classExtra="p-md-3 p-1 fs-14 w-100"
+            classExtra="p-md-3 p-2 fs-14 w-100"
             size="lg"
             type="submit"
             disabled={loading}

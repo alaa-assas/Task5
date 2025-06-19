@@ -15,12 +15,12 @@ import BtnCustom from '../BtnCustom/BtnCustom';
 const ModalCustom: React.FC<ModalProps> = ({show,onHide,body,onSubmit,submitText = 'Submit', cancelText = 'Cancel'
 }) => {
   return (
-    <Modal show={show} onHide={onHide} 
+    <Modal show={show} onHide={onHide} className=''
     size="lg"
     aria-labelledby="contained-modal-title-vcenter"
     centered>
       <Modal.Body>{body}</Modal.Body>
-      <Modal.Footer className='justify-content-around border border-0'>
+      <Modal.Footer className='d-flex justify-content-around border border-0 flex-md-row flex-column'>
         {onSubmit && (
           <BtnCustom name={submitText} classExtra="modal-custom-btn p-3 fs-2"  type="button"  onClick={onSubmit}/>
         )}
