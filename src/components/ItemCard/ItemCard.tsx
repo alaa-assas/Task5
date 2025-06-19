@@ -63,16 +63,13 @@ const ItemCard: React.FC<ItemCardProps> = ({id,productName,src,onEdit,onDeleteSu
 
   return (
     <div
-      className="grid-card card image-hover-container position-relative cursor-pointer d-inline-block overflow-hidden rounded-4 grid-card">
-        <div className="card-body">
+      className="grid-card image-hover-container position-relative cursor-pointer d-inline-block overflow-hidden rounded-4">
           <ImageCustom
           src={src}
           fallbackSrc="/Task5/Images/product/default.png"
           alt={productName}
           className="w-100 h-100 object-contain"
-        />
-        </div>
-     
+        />    
       {/* show when hover Item*/}
       <div
         className="overlay d-flex flex-column align-items-center justify-content-center w-100 h-100 top-0 start-0 position-absolute"

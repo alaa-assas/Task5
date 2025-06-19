@@ -9,7 +9,7 @@ import BtnCustom from "../../../components/BtnCustom/BtnCustom";
 import "./ItemsIndex.css";
 import Loader from "../../../components/Loader/Loader";
 import ErrorReload from "../../../components/ErrorReload/ErrorReload";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 
 const ItemsIndex = () => {
@@ -21,15 +21,39 @@ const ItemsIndex = () => {
   const [error, setError] = useState<string | null>(null);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(products.length / 8);
-  const indexOfLastItem = currentPage * 8;
-  const indexOfFirstItem = indexOfLastItem - 8;
+  const [itemsToShow, setItemsToShow] = useState(6);
+
+  const totalPages = Math.ceil(products.length / itemsToShow);
+  const indexOfLastItem = currentPage * itemsToShow;
+  const indexOfFirstItem = indexOfLastItem - itemsToShow;
 
   const currentProducts = filteredProducts.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
+  const updateItemsToShow = () => {
+    const width = window.innerWidth;
+    if (width >= 1200) {
+      setItemsToShow(8); 
+    } else if (width >= 992) {
+      setItemsToShow(6); 
+    } else if(width >= 576){
+      setItemsToShow(4);
+    } else {
+      setItemsToShow(2);
+    }         
+  };
 
+  useEffect(() => {
+    updateItemsToShow();
+    window.addEventListener('resize', updateItemsToShow);
+    return () => window.removeEventListener('resize', updateItemsToShow);
+  }, []);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
@@ -58,9 +82,7 @@ const ItemsIndex = () => {
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+
 
   // Search for products by name
   const Search = (query: string) => {

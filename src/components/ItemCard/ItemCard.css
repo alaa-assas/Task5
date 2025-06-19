@@ -1,16 +1,11 @@
-/* .grid-card {
-    flex: 0 0 208px;
-    max-width: 208px;
-  } */
-  
 .image-hover-container {
     transition: all 0.3s ease;
     box-shadow: 8px 8px 4px 0px #00000040;
 }
 
-.card-body{
-    height: 208px;
-    width: 208px; 
+.grid-card{
+    height: 208px  !important;;
+    width: 208px  !important;; 
 }
 
 .image-hover-container img {
@@ -61,9 +56,9 @@
 }
 
 @media (max-width: 1366px){
-    .card-body{
-        height: 175px;
-        width: 200px; 
+    .grid-card{
+        height: 175px !important;
+        width: 175px !important; 
     }
 
     .overlay p {
@@ -78,20 +73,19 @@
     }
 }
 
-/* @media (max-width: 992px){
-    .card-body{
-        height: 175px;
-        width: 175px; 
+@media (max-width: 768px){
+    .grid-card{
+        height: 160px !important;
+        width: 160px !important; 
     }
 
     .overlay p {
-        font-size: 22px !important;
+        font-size: 16px !important;
     }
 
     .image-hover-container .btn-edit,
     .image-hover-container .btn-delete{
-        font-size: 14px !important;
-        padding: 8px 12px !important;
-        min-width: 70px;
+        font-size: 12px !important;
+        min-width: 60px;
     }
-} */
+}
